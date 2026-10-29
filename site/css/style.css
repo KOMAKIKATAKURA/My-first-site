@@ -1,0 +1,1135 @@
+@charset"utf-8";
+
+/* 簡易リセットCSS */
+html {
+    font-size: 16px;
+
+}
+
+* {
+
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f4ebdd;
+    color: #2b211c;
+}
+
+nav a:hover {
+    color: #2b211c;
+}
+
+/* フルードイメージ化 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 共通：幅設定クラス */
+
+.inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: serif;
+    font-size: 40px;
+    text-align: center;
+    color: #8e1717;
+}
+
+h3 {
+    font-family: serif;
+    font-size: 30px;
+    color: #8e1717;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #8e1717;
+}
+
+/* ヘッダー */
+
+.header {
+    width: 100%;
+
+   
+position: relative;
+
+}
+
+.header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 70px 50px;
+
+  background-image: url(../images/フレーム33.png), url(../images/_繝ｬ繧､繝､繝ｼ_1\ \(1\).png);
+    /* 表示位置の指定（左上, 右上） */
+    background-position: left top, right top;
+
+    /* 繰り返しの有無（基本はno-repeatを指定） */
+    background-repeat: no-repeat, no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    /* ヘッダーの高さ */
+    z-index: 1000;
+    /* 他の要素より上に表示 */
+    background-color: #f4ebdd;
+}
+
+
+/* ロゴ */
+
+.logo {
+    margin: 0;
+    width: auto;
+
+}
+
+/* ナビゲーション */
+.nav {
+    margin-left: auto;
+    width: auto;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    width: 200px;
+    color: #8e1717;
+    padding: 5px;
+    text-align: right;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+
+}
+
+/* 予約ボタン */
+.reserve {
+    font-size: 30px;
+    color: #f4ebdd;
+    background-color: #8e1717;
+    border-radius: 20px;
+    text-align: center;
+
+
+}
+.sp-yoyaku :hover{
+    color: #2b211c;
+}
+    
+  
+/* キービジュアル */
+#keyvisual {
+    background-image: url(../images/Frame\ 28.png), url(../images/Frame\ 29.png);
+    /* 表示位置の指定（左下, 右下） */
+    background-position: left bottom, right bottom;
+
+    /* 繰り返しの有無（基本はno-repeatを指定） */
+    background-repeat: no-repeat, no-repeat;
+
+}
+
+#keyvisual img {
+    margin: 0 auto;
+    /* width: 100%; */
+    margin-top: 100px;
+}
+
+/* スマホ版トップを隠す */
+.top-sp {
+    display: none;
+}
+
+.top-sp img {
+    width: 100%;
+    height: auto;
+}
+
+/* セクション */
+.contact img {
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.kumo {
+    background-image: url(../images/_繝ｬ繧､繝､繝ｼ_1.png), url(../images/Frame\ 32.png);
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+}
+
+
+/* スクロール */
+.cp_arrows {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cp_arrows .cp_arrow {
+    /*矢印を配置するベースの設定*/
+    position: absolute;
+    width: 60px;
+    animation: arrow-move09 2s infinite ease-in-out;
+}
+
+.cp_arrows .cp_arrow::before,
+.cp_arrows .cp_arrow::after {
+    /*矢印全体の設定*/
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: #8e1717;
+    border-radius: 10px;
+}
+
+.cp_arrows .cp_arrow::before {
+    /*矢印左の線の位置と傾斜*/
+    left: 3px;
+    transform: rotate(30deg);
+}
+
+.cp_arrows .cp_arrow::after {
+    /*矢印左の線の位置と傾斜*/
+    right: 3px;
+    transform: rotate(-30deg);
+}
+
+@keyframes arrow-move09 {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    48% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* おすすめメニュー */
+.osusume {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.osusume div {
+    width: 30%;
+    font-family: sans-serif;
+    font-size: 23px;
+}
+
+/* メニュー一覧へ */
+
+
+.itirann a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #f4ebdd;
+    display: block;
+    width: 200px;
+    margin: 50px auto;
+    border-radius: 20px;
+    background-color: #8e1717;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.itirann :hover {
+    color: #2b211c;
+}
+
+
+/* お席のご案内 */
+.kositu {
+    width: 500px;
+    height: auto;
+    padding: 10px;
+}
+
+.teburu {
+    width: 500px;
+    height: auto;
+    padding: 10px;
+}
+
+.ab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.b {
+    display: flex;
+    background-image: url(../images/_繝ｬ繧､繝､繝ｼ_1.png);
+    background-repeat: no-repeat;
+
+
+}
+
+#c {
+    background-image: url(../images/Frame\ 28.png), url(../images/Frame\ 29.png);
+    /* 表示位置の指定（左下, 右下） */
+    background-position: left bottom, right bottom;
+
+    /* 繰り返しの有無（基本はno-repeatを指定） */
+    background-repeat: no-repeat, no-repeat;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+/* フッター */
+footer {
+
+    background-color: #8e1717;
+    color: #f4ebdd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo2 {
+    width: 100px;
+    /* height: 100px; */
+    min-height: 60px;
+    /* 必要に応じて最低限の高さを確保 */
+    padding: 15px 0;
+    /* 上下の余白で高さを出す */
+}
+
+.yoyaku {
+    text-align: center;
+    font-size: 30px;
+
+}
+
+.btn2 {
+    margin: 20px;
+    width: 150px;
+    color: #8e1717;
+    background-color: #f4ebdd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+
+}
+.btn2:hover{
+    color: #2b211c;
+}
+.jyuusyo p {
+    text-align: right;
+    color: #f4ebdd;
+}
+
+.jyuusyo img {
+    display: inline-block;
+}
+
+
+/* 亜細亜について */
+.zero {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+
+
+.senn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-family: serif;
+    font-weight: 700;
+    color: #8e1717;
+}
+
+.senn::before,
+.senn::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: #8e1717;
+}
+
+.senn::before {
+    margin-right: 0.5em;
+}
+
+.senn::after {
+    margin-left: 0.5em;
+}
+
+/* 1 */
+.iti img {
+    width: 600px;
+    height: auto;
+    padding: 10px;
+}
+
+/* 2 */
+.ni {
+    margin-top: 300px;
+}
+
+/* 3 */
+.san img {
+    width: 600px;
+    height: auto;
+    padding: 10px;
+}
+
+/* メニュー */
+.kome {
+    text-align: right;
+    padding-right: 30px;
+    font-size: 25px;
+    font-family: serif;
+}
+
+.items {
+    display: grid;
+
+    gap: 50px;
+    padding: 50px;
+}
+
+.syokuji {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    background-image: url(../images/Frame\ 32.png);
+    background-repeat: no-repeat;
+    background-position: right;
+
+}
+
+.dorinnku {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+}
+
+.menyu img {
+    width: 330px;
+    height: auto;
+    padding: 10px;
+
+}
+
+.dorinnku img {
+    width: 300px;
+}
+
+
+
+div h3,
+p {
+    text-align: center;
+
+}
+
+/* お知らせ */
+.osirase {
+    margin: 50px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+    background-image: url(../images/_繝ｬ繧､繝､繝ｼ_1.png), url(../images/Frame\ 32.png);
+    background-repeat: no-repeat;
+    background-position: 20px 30px, right;
+
+}
+
+dt {
+    font-family: serif;
+    font-size: 30px;
+    color: #8e1717;
+    width: 35%;
+    text-align: justify;
+}
+
+span {
+    font-family: serif;
+    font-size: 40px;
+    color: #8e1717;
+
+}
+
+dd {
+    font-family: sans-serif;
+    font-size: 25px;
+    margin: px;
+    color: #8e1717;
+    width: 65%;
+
+}
+
+.btn3 a{
+    color: #f4ebdd;
+    width: 250px;
+    background-color: #8e1717;
+    padding: 20px;
+    text-align: right;
+    border-radius: 20px;
+    text-decoration: none;
+    margin: 0 auto;
+    display: flex;
+   justify-content: center;
+   
+    
+    
+
+}
+.btn3 :hover{
+    color: #2b211c;
+}
+
+dl {
+
+
+    column-gap: 50px;
+    row-gap: 30px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 30px;
+}
+
+/* 店舗情報 */
+.list2 {
+    display: flex;
+    justify-content: left;
+    margin: 0 auto;
+    max-width: px;
+    padding: 30px;
+}
+
+.mise-box img {
+    margin-right: 100px;
+    margin-top: 100px;
+    width: 500px;
+    max-width: 100%;
+    display: block;
+}
+
+.mise3 {
+    display: flex;
+}
+
+/* アクセス */
+.jr {
+    text-align: center;
+    color: #8e1717;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+.maps {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.haikei {
+    background-image: url(../images/_繝ｬ繧､繝､繝ｼ_1.png), url(../images/Frame\ 32.png);
+    background-position: left, right;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 20px 40px, right;
+}
+
+.maps iframe {
+    width: 100%;
+    max-width: 600%;
+    height: 450px;
+}
+
+/* ご予約 */
+
+.goyoyaku {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    width: 80%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.left {
+    width: 100%;
+    color: #8e1717;
+
+}
+
+.kumo2 {
+    background-image: url(../images/_繝ｬ繧､繝､繝ｼ_1.png), url(../images/Frame\ 32.png);
+    background-repeat: no-repeat;
+    background-position: left top, right;
+}
+
+
+.syasin img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.dennwa {
+    font-size: 30px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-family: serif;
+
+}
+
+.go {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+
+.go strong {
+    font-size: 30px;
+    margin-left: 8px;
+
+}
+
+.yoyaku2 {
+    display: flex;
+
+}
+
+.dl2 {
+    width: 100%;
+}
+
+.dl2 dl {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    line-height: 2;
+
+
+}
+
+.dl2 dt {
+    font-weight: normal;
+    width: 120px;
+    line-height: 2;
+
+}
+
+.dl2 dd {
+    margin: 0;
+}
+
+.holomu {
+    text-align: left;
+    height: 250px;
+    border: 1px solid #8e1717;
+    padding: 50px;
+    margin-top: 35px;
+
+}
+
+.holomu2 {
+
+    font-size: 25px;
+    margin-left: 8px;
+
+}
+
+.btn4 {
+    width: 200px;
+    background-color: #8e1717;
+    color: #f4ebdd;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.btn4:hover{
+    color: #2b211c;
+}
+
+
+
+
+
+
+/* モバイル対応 */
+#hamburger {
+    display: none;
+}
+
+.sp-menu {
+    display: none;
+}
+.top2{
+    display: none;
+}
+/* 共通 */
+
+@media screen and (max-width:768px) {
+.top2{
+    display: block;
+}
+    /* 共通 */
+.top2 img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+    .senn {
+        font-size: 30px;
+        padding-top: 40px;
+    }
+
+    .header {
+        height: 70px;
+
+        position: relative;
+        background-size: 70px;
+    }
+    .header-inner{
+        background-size: 70px;
+    }
+
+    /* pcナビを消す */
+    .nav {
+        display: none;
+    }
+
+    /* ハンバーガー */
+    #hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+  
+        position: fixed;
+        right: 50px;
+        top: 50px;
+        width: 30px;
+        padding: 0;
+        border: none;
+        background: none;
+        z-index: 9999;
+    }
+
+
+    .hamburger span {
+        width: 100%;
+        height: 2.5px;
+        background-color: #8e1717;
+        position: relative;
+        transition: ease .4s;
+        /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+        display: block;
+   
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 0;
+    }
+
+    .hamburger span:nth-child(2) {
+        margin: 8px 0;
+    }
+
+    .hamburger span:nth-child(3) {
+        top: 0;
+    }
+
+    /* pcナビを消す */
+    .nav {
+        display: none;
+    }
+
+    .sp-menu {
+        display: none;
+    }
+
+    .sp-menu.open {
+        display: flex;
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: #f4ebdd;
+        z-index: 10000;
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .sp-menu nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        margin-top: 140px;
+    }
+
+    .sp-menu nav a {
+        color: #8e1717;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .close-menu {
+        position: absolute;
+        bottom: 40px;
+        width: 45px;
+        height: 45px;
+
+        border: none;
+        border-radius: 50%;
+        background-color: #8e1717;
+        color: #f4ebdd;
+        font-size: 35px;
+        line-height: 40px;
+        z-index: 10001;
+        cursor: pointer;
+    }
+
+
+
+.btn :hover{
+    color: #2b211c;
+}
+
+
+
+
+
+
+    /* 画像 */
+    .ajia img {
+        width: 250px;
+        height: auto;
+
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 横から縦並び */
+    .items {
+        grid-template-columns: 1fr;
+    }
+
+    /* pcではスマホ版を隠す */
+
+    /* スマホ版トップを表示 */
+    .top-pc {
+        display: none;
+    }
+
+    .top-sp {
+        display: block;
+        width: 100%;
+    }
+
+    .sp-yoyaku {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .sp-yoyaku a {
+        display: inline-block;
+        width: 60%;
+        padding: 15px;
+        background-color: #8e1717;
+        color: #f4ebdd;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 20px;
+        margin-top: 30px;
+    }
+.sp-yoyaku :hover{
+    color: #2b211c;
+}
+    .osusume div {
+        width: 100%;
+    }
+
+    .ab {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .b {
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+    }
+
+    .kumo {
+        background-image: none;
+    }
+
+    #c {
+        background-repeat: no-repeat;
+        background-size: 70px auto;
+    }
+
+    /* フッター */
+    footer {
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+
+    }
+
+    .yoyaku {
+        margin: 20px auto;
+    }
+
+    .logo2 {
+        width: 55px;
+        margin-left: 15px;
+    }
+
+    .btn2 {
+        display: block;
+        width: 100%;
+        padding: 5px;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        margin-top: 20px;
+    }
+.btn2 :hover{
+    color: #2b211c;
+}
+    .jyuusyo p {
+        display: none;
+    }
+
+    .jyuusyo img {
+        display: inline-block;
+        width: 55px;
+        height: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* 亜細亜について */
+    .zero {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .iti,
+    .ni,
+    .san {
+        width: 100%;
+    }
+
+    /* メニュー */
+    .syokuji,
+    .dorinnku {
+        grid-template-columns: 1fr;
+    }
+
+    .kome {
+        font-size: 18px;
+        text-align: right;
+    }
+
+    .syokuji img {
+        width: 350px;
+    }
+
+    .dorinnku img {
+        height: 400px;
+    }
+
+    /* お知らせ */
+    .osirase {
+        width: 90%;
+        margin: 0 auto;
+        background-image: none;
+    }
+
+    .osirase.list {
+        width: 100%;
+    }
+
+    .btn3 :hover{
+        color: #2b211c;
+    }
+
+    /* 店舗情報 */
+    .mise3 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .list2 {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .mise-box {
+        width: 100%;
+    }
+
+    .mise-box img {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    .ni {
+        margin-top: 0;
+    }
+
+    .syokuji {
+        background-image: none;
+    }
+
+    dt {
+        font-size: 23px;
+        white-space: nowrap;
+    }
+
+    span {
+        font-size: 25px;
+    }
+
+    dd {
+        font-size: 18px;
+    }
+
+
+    /* アクセス */
+    .haikei {
+        width: 90%;
+        margin: 0 auto;
+        background-image: none;
+    }
+
+    .maps {
+        width: 100%;
+    }
+
+    .maps iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    .jr {
+        font-size: 15px;
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ご予約 */
+    .goyoyaku {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .left {
+        width: 100%;
+        align-items: center;
+    }
+
+    .syasin {
+        display: none;
+    }
+
+
+    .dennwa {
+        font-size: 18px;
+    }
+
+    .kumo2 {
+        background-image: none;
+    }
+
+.btn4 :hover{
+    color: #2b211c;
+}
+}
